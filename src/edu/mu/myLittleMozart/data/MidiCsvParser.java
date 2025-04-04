@@ -48,7 +48,7 @@ public class MidiCsvParser {
 					 noteOnOff = 0;
 				 }
 				 else {
-					 System.out.println("Skipping invalid note type in line: " + String.join(", ", data));
+					 //System.out.println("Skipping invalid note type in line: " + String.join(", ", data));
 					 continue; 
 				 }
 				 

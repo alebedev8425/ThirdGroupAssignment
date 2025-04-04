@@ -25,7 +25,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-            List<MidiEventData> midiEvents = MidiCsvParser.readCSVFile("./files/mystery-song.csv");
+            List<MidiEventData> midiEvents = MidiCsvParser.readCSVFile("./files/mystery_song.csv");
             Sequence sequence = new Sequence(Sequence.PPQ, 384);
             Track track = sequence.createTrack();
 
@@ -66,6 +66,7 @@ public class Main {
             }
 
             // Playing the sequence
+           // System.out.println("sequencer started");
             Sequencer sequencer = MidiSystem.getSequencer();
             sequencer.open();
             sequencer.setSequence(sequence);

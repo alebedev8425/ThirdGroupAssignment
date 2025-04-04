@@ -3,6 +3,9 @@ import java.io.BufferedReader;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.sound.midi.ShortMessage;
+
 import java.io.IOException;
 import java.io.FileReader;
 
@@ -27,7 +30,7 @@ public class MidiCsvParser {
 			 //read lines until end  
 			 String line; 
 			 while((line = br.readLine()) != null) { 
-				 System.out.println(line);   //comment out test code.
+				// System.out.println(line);   //comment out test code.
 				 String[] data = line.split(",");
 				 
 				 try {
@@ -42,10 +45,10 @@ public class MidiCsvParser {
 				 
 				 //Using .equals to decide if noteOnOff should be = to 1 or 0 
 				 if (noteOnOffStr.equals("Note_on_c")) {
-					 noteOnOff = 1;
+					 noteOnOff = ShortMessage.NOTE_ON;
 				 }
 				 else if (noteOnOffStr.equals("Note_off_c")) { 
-					 noteOnOff = 0;
+					 noteOnOff = ShortMessage.NOTE_OFF;
 				 }
 				 else {
 					 //System.out.println("Skipping invalid note type in line: " + String.join(", ", data));

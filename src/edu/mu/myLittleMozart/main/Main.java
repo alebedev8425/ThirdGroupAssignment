@@ -66,7 +66,7 @@ public class Main {
             }
 
             // Playing the sequence
-           // System.out.println("sequencer started");
+           System.out.println("sequencer started");
             Sequencer sequencer = MidiSystem.getSequencer();
             sequencer.open();
             sequencer.setSequence(sequence);

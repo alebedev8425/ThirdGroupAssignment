@@ -9,12 +9,14 @@ import java.io.FileReader;
 public class MidiCsvParser {
 	/**
 	 * reads csv file and stores contents into midiEvents.
+	 * @param <MidiEventData>
+	 * @param <MidiEventData>
 	 * @param filepath
 	 * @return list of MidiEventData 
 	 * @throws IOException if an error is encountered while reading the file 
 	 */
 	
-	public List<MidiEventData> readCSVFile(String filepath) throws IOException {
+	public static List<MidiEventData> readCSVFile(String filepath) throws IOException {
 		
 		//creates list 
 		List<MidiEventData> midiEvents = new ArrayList<>();
